@@ -4,12 +4,12 @@ from tensorflow.keras.preprocessing.image import img_to_array
 import numpy as np
 from PIL import Image
 
-st.title('Alzheimers Disease Classification')
-st.write("This is a simple web app to classify Alzheimers Disease using a Convolutional Neural Network.")
+st.title(':rainbow[Alzheimers Disease Classification]')
+st.write(":gray[This is a simple web app to classify Alzheimers Disease using a Convolutional Neural Network.]")
 
-name = st.text_input("Enter your name:")
-phone_number = st.text_input("Enter your phone number:")
-email = st.text_input("Enter your email:")
+name = st.text_input("", placeholder="Enter your name")
+phone_number = st.text_input("",placeholder ="Enter your phone number")
+email = st.text_input("", placeholder = "Enter your email")
 file_up = st.file_uploader("Upload an image", type=["jpg", "png", "jpeg"])
 
 def preprocess_image(image, target_size):
@@ -42,4 +42,6 @@ if file_up is not None:
         st.write("An error occurred during prediction:")
         st.error(e)
 
-st.write("Created by Harshitha")
+st.markdown('''
+ **Created by :blue-background[Harshitha] :tulip:**
+''')
