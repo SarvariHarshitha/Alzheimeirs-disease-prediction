@@ -41,3 +41,5 @@ if file_up is not None:
     except Exception as e:
         st.write("An error occurred during prediction:")
         st.error(e)
+
+st.write("Created by Harshitha")
